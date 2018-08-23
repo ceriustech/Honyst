@@ -1,0 +1,157 @@
+/* Header-Logo-Navigation */
+
+
+#sidebar-navigation {
+    margin: 0;
+    padding: 0;
+    background: #F7F7F9;
+    width: 20%; 
+    position: fixed;
+    overflow: hidden;
+    height: 100%;
+    -webkit-box-shadow: 10px 1px 28px -10px rgba(181,177,177,1);
+    -moz-box-shadow: 10px 1px 28px -10px rgba(181,177,177,1);
+    box-shadow: 10px 1px 28px -10px rgba(181,177,177,1);
+}
+
+.appTitle {  
+    background-color: #F7F7F9 ;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1AA582; 
+}
+
+.appTitle .fa-houzz {
+    font-size: 2em; 
+}
+
+.appTitle h1 {
+    letter-spacing: 2px;
+    padding-left: 5px;
+    font-size: 1.5em;
+}
+
+.navList {
+    list-style-type: none;
+    position: relative;
+    top: -18px;
+    width: 100%;
+}
+
+.navList p {
+    padding: 25px;
+    color: #6d6d6d;
+}
+
+.navList a {
+    padding-left: 10px;
+    color: #6d6d6d; 
+    font-weight: 700;
+}
+
+.navList p:hover {
+    background: #D6FFEF;
+    transition-duration: 0.5s;
+    border-left: 5px solid #38CB91;
+}
+
+/* Label Section */
+
+.labels {
+    position: relative;
+    top: 25px;
+    margin-left: 25px;
+    color: #747E84; 
+}
+
+.labels2 {
+    margin-bottom: 20px
+}
+
+.labelCount {
+    float: right;
+    position: relative;
+    right: 25px;
+    color: #747E84; 
+}
+
+.navList2 p {
+    margin-bottom: 20px; 
+}
+
+.navList2 a {
+    color: #747E84;
+    text-transform: capitalize; 
+}
+
+.navList2 .fa-circle {
+    margin-right: 10px;
+}
+
+.navList2 .green {
+    color: green; 
+}
+
+.navList2 .purple {
+    color: rebeccapurple; 
+}
+
+.navList2 .red {
+    color: darkred; 
+}
+
+.navList2 p:hover {
+}
+
+/* Profile Section */ 
+
+.profile {
+    background-color: #F7F7F9; 
+    height: 80px; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.profilePic {
+    border-radius: 25px;
+    background-color: #737C83;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    left: 25px;
+    top: 15px; 
+}
+
+.activeStatus {
+    border: 2px solid #000000;
+    border-radius: 25px;
+    background-color: #fff;
+    height: 20px;
+    width: 20px;
+    float: right; 
+}
+
+.profileInfo {
+    width: 50%;
+    position: relative;
+    left: 90px;
+    bottom: 25px;
+    color: #737C83;
+    text-transform: capitalize;
+}
+
+.profileInfo h3 {
+    font-size: 15px;
+}
+
+.fa-chevron-up {
+    float: right;
+    position: relative;
+    bottom: 15px;
+    right: 25px;
+}
+
