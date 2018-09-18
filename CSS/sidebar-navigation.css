@@ -1,7 +1,7 @@
 /* Header-Logo-Navigation */
 
 
-#sidebar-navigation {
+.sidebar-navigation {
     margin: 0;
     padding: 0;
     background: #F7F7F9;
@@ -10,7 +10,6 @@
     overflow: hidden;
     height: 100%;
     -webkit-box-shadow: 10px 1px 28px -10px rgba(181,177,177,1);
-    -moz-box-shadow: 10px 1px 28px -10px rgba(181,177,177,1);
     box-shadow: 10px 1px 28px -10px rgba(181,177,177,1);
 }
 
@@ -18,8 +17,14 @@
     background-color: #F7F7F9 ;
     width: 100%;
     height: 8%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     color: #1AA582; 
 }
@@ -54,6 +59,7 @@
 
 .navList p:hover {
     background: #D6FFEF;
+    -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
     border-left: 5px solid #38CB91;
 }

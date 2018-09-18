@@ -1,52 +1,63 @@
-#content-area .header-section {
+.content-area .header-section {
     background: #F7F7F9;
+    
 }
 
-#content-area .header-section .search-section {
+.content-area .header-section .search-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     border-bottom: 2px solid #E3E9F1;
     padding: 15px 16px;
     width: 100%; 
 }
 
-#content-area .header-section .search-section .fa-search {
+.content-area .header-section .search-section .fa-search {
     color: #747C81;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 15px;
 }
 
-#content-area .header-section .search-section .search-container { 
+.content-area .header-section .search-section .search-container { 
     width: 25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 
-#content-area .header-section .search-section .search-container input {
+.content-area.header-section .search-section .search-container input {
     width: 100%;
     border-color: inherit;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-#content-area .header-section .search-section .header-section-tools {
+.content-area .header-section .search-section .header-section-tools {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; 
+    -webkit-box-pack: end; 
+    -ms-flex-pack: end; 
     justify-content: flex-end; 
 }
 
-#content-area .header-section .search-section .header-section-tools .tool-wrapper {
+.content-area .header-section .search-section .header-section-tools .tool-wrapper {
     position: relative;
     left: 15px;
 }
-#content-area .header-section .search-section .header-section-tools .left-border {
+.content-area .header-section .search-section .header-section-tools .left-border {
     border-left: 2px solid #E3E9F1;
     position: relative;
     bottom: 15px;
     padding: 30px 0;
 }
-#content-area .header-section .search-section .header-section-tools .tool {
+.content-area .header-section .search-section .header-section-tools .tool {
     color: #747C81;
     font-size: 1.3em;
     margin-left: 20px;
