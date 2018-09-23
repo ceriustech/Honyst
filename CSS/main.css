@@ -1,8 +1,12 @@
 @import "reset.css";
 @import "sidebar-navigation.css";
 @import "top-header-section.css";
-@import "property-info.css";
+@import "property-section.css";
 @import "dashboard-section.css";
+@import "ledger-section.css";
+@import "messages-section.css";
+@import "tenants-section.css";
+@import "transactions-section.css";
 
 
 .content-area {

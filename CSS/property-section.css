@@ -1,0 +1,70 @@
+.property-info {
+    background-color: #f1f1f1;
+    padding: 15px;
+}
+
+.property-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+.property-grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 30px;
+    -webkit-box-shadow: 0px 1px 13px 1px rgba(158,156,156,1);
+    box-shadow: 0px 1px 13px 1px rgba(158,156,156,1);
+}
+
+/** Property Card **/
+/* Property Card Layout Styles */
+.property-grid-container .property-1 {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 35;
+}
+.property-grid-container .property-2 {
+    grid-column: 4 / span 3;
+    grid-row: 1 / span 35;
+}
+.property-grid-container .property-3 {
+    grid-column: 8 / span 3;
+    grid-row: 1 / span 35;
+}
+.property-grid-container .property-4 {
+    grid-column: 1 /  span 3;
+    grid-row: 36 / span 35;
+}
+.property-grid-container .property-5 {
+     grid-column:  4/ span 3;
+    grid-row: 36 / span 35;
+}
+.property-grid-container .property-6 {
+    grid-column: 8 / span 3;
+    grid-row: 36 / span 35;
+}
+
+.property-grid-container .property-card .border {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px 15px;
+    border-bottom: 2px solid #c4c4c4;
+}
+
+.property-grid-container .property-card .border .fa-home {
+    font-size: 1.5em;
+    color: #1AA582;
+}
+
+.property-grid-container .border h1 {
+    padding: 5px ;
+    height: 15%;
+    color: #6d6d6d;
+}
+
+/* Property Profile */
+.property-grid-container .property-card .property-profile img {
+    width: 100%;
+}
