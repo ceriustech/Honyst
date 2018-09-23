@@ -1,6 +1,8 @@
 ReactDOM.render(<App />, document.querySelector('#root'));
 
+
 //<Side Panel Navigation>
+
 function SidePanel() {
     return (
         <div className="sidebar-navigation">
@@ -25,9 +27,11 @@ function SidePanel() {
         </div>
     );
 }
+
 //</Side Panel Navigation>
 
 //<Content Area Dashboard>
+
 function ContentArea() {
    return(
     <div className="content-area">
@@ -125,6 +129,7 @@ function ContentArea() {
 //</Content Area Properties>
 
 //<Render Dashboard Section>
+
 function App() {
     return (
         <div className="main">
@@ -149,3 +154,4 @@ function App() {
     );
 }*/
 //</Property Section>
+
