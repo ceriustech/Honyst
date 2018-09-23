@@ -26,7 +26,7 @@ function SidePanel() {
     );
 }
 
-function ContentArea () {
+function ContentArea() {
    return(
     <div className="content-area">
        <section className="header-section">
@@ -83,15 +83,13 @@ function ContentArea () {
    ); 
 }
 
-function App () {
+function App() {
     return (
         <div className="main">
             <div className="sidebar-navigation">
                 <SidePanel/>
             </div>
                 <ContentArea/>
-            
-            
         </div>
             
     );
