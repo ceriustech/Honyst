@@ -20,22 +20,22 @@ function SidePanel() {
                 <p className="actionItem"><i className="fas fa-sticky-note"></i><a className="actionItem" href="#contact">Ledger</a></p>
                 <p className="actionItem"><i className="fas fa-envelope-open"></i><a className="actionItem" href="#about">Messages</a></p>  
             </div>
-             <div className="profile">
-        <div className="profilePic"><div className="activeStatus"></div></div>
-        <div className="profileInfo">
-            <h3>profile name</h3><i className="fas fa-chevron-up"></i>
-            <p>profile title</p>
+        <div className="profile">
+            <div className="profilePic"><div className="activeStatus"></div></div>
+            <div className="profileInfo">
+                <h3>profile name</h3><i className="fas fa-chevron-up"></i>
+                <p>profile title</p>
+            </div>
         </div>
-    </div>
         </div>
     );
 }
 
 //</Side Panel Navigation>
 
-//<Content Area Dashboard>
+//<Content Area>
 function ContentArea() {
-   return(
+   return (
     <div className="content-area">
        <section className="header-section">
         <div className="search-section">
@@ -56,8 +56,6 @@ function ContentArea() {
             <Route exact path = "/properties" component = {PropertyList}/>
             <Route exact path = "/tenants" component = {PropertyList}/>
             </div>
-        
-
       </div>
    ); 
 }
@@ -135,10 +133,13 @@ function App() {
         <div className="main">
         <Router>
         <div>
-        <div className="sidebar-navigation">
+            <div className="sidebar-navigation">
                 <SidePanel/>
             </div>
                 <ContentArea/>
+            <div className="dashboard-info">
+                <Dashboard/>
+            </div>
         </div>
         </Router>
         </div>      
