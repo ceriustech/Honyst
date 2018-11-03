@@ -109,17 +109,17 @@ function PropertyList() {
 
         <section className="property-info">
             <div className="property-grid-container">
-                <div class="property-1 property-card">
-                    <div class="border">
-                        <i class="fas fa-home"></i>
+                <div className="property-1 property-card">
+                    <div className="border">
+                        <i className="fas fa-home"></i>
                         <h1>555 E Ave</h1>
                     </div>
-                    <div class="property-profile">
-                        <div class="property-profile-pic"><img src="Img/house-image-1.jpg"/></div>
+                    <div className="property-profile">
+                        <div className="property-profile-pic"><img src="Img/house-image-1.jpg"/></div>
                     </div>
-                    <p><i class="fas fa-dollar-sign"></i>1,250</p>
-                    <p><i class="fas fa-bed"></i> <span>2bd 1,200 sqft+</span></p>
-                    <p><i class="fas fa-bath"></i> <span>1ba</span></p>
+                    <p><i className="fas fa-dollar-sign"></i>1,250</p>
+                    <p><i className="fas fa-bed"></i> <span>2bd 1,200 sqft+</span></p>
+                    <p><i className="fas fa-bath"></i> <span>1ba</span></p>
                 </div> 
             </div>
         </section>
