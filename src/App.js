@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 import './App.css';
-import UserInput from './UserInput/UserInput';
-import UserOutput from './UserOutput/UserOutput';
+import Navigation from './Navigation/Navigation';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <UserInput />
-        <UserOutput />
-        <UserOutput />
+       <Navigation />
+       <FontAwesomeIcon icon={faHome} />
       </div>
     ) 
   }
