@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
        <Navigation />
-       <FontAwesomeIcon icon={faHome} />
+      
       </div>
     ) 
   }
