@@ -46,7 +46,7 @@ const Item = styled(Link)`
   justify-content: center;
   color: white;
   &:hover {
-    background-color: #74b9ff;
+    background-color: #5f27cd;
   }
 `;
 
