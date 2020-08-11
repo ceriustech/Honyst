@@ -4,9 +4,9 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDesktop,
-  faWind,
-  faFolder,
-  faSlidersH,
+  faBuilding,
+  faBook,
+  faMoneyCheckAlt,
   faEnvelope,
   faSignOutAlt,
   faHeading,
@@ -57,20 +57,20 @@ export default function Navigation(props) {
         <FontAwesomeIcon icon={faHeading} />
       </Item>
       <Menu>
-        <Item flex={1} to="/one">
-          <FontAwesomeIcon icon={faWind} />
-        </Item>
-        <Item flex={1} to="/two">
+        <Item flex={1} to="/dashboard">
           <FontAwesomeIcon icon={faDesktop} />
         </Item>
-        <Item flex={1} to="/three">
-          <FontAwesomeIcon icon={faFolder} />
+        <Item flex={1} to="/properties">
+          <FontAwesomeIcon icon={faBuilding} />
         </Item>
-        <Item flex={1} to="/four">
-          <FontAwesomeIcon icon={faSlidersH} />
+        <Item flex={1} to="/ledger">
+          <FontAwesomeIcon icon={faBook} />
         </Item>
-        <Item flex={1} to="/five">
+        <Item flex={1} to="/messages">
           <FontAwesomeIcon icon={faEnvelope} />
+        </Item>
+        <Item flex={1} to="/payments">
+          <FontAwesomeIcon icon={faMoneyCheckAlt} />
         </Item>
       </Menu>
       <Item to="/signout">
