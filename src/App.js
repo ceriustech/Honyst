@@ -15,17 +15,6 @@ const Layout = styled.div`
   padding: 16px;
 `;
 
-<<<<<<< HEAD
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-       <Navigation />
-      
-      </div>
-    ) 
-  }
-=======
 // first widget thought
 const WidgetOne = styled.div`
   box-sizing: border-box;
@@ -64,7 +53,6 @@ function App() {
       </BodyLayout>
     </Layout>
   );
->>>>>>> ad52881323316bcf468c93265cad4715839b997e
 }
 
 export default App;
