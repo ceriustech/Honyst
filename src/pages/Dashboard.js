@@ -27,7 +27,7 @@ function Dashboard({ children }) {
     <DashBoardLayout>
       <h1>Dashboard</h1>
       <LedgerCardData />
-      {children}
+      <DashboardContent>{children}</DashboardContent>
     </DashBoardLayout>
   );
 }
