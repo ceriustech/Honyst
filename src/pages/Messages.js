@@ -130,6 +130,15 @@ const ChatFeed = styled.div`
   flex: 10;
   width: 100%;
   justify-content: flex-end;
+  div {
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+      direction: btt;
+    }
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 `;
 
 const Message = styled.form`
@@ -160,6 +169,12 @@ const Message = styled.form`
 `;
 
 const ContactsList = styled.ul`
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   box-sizing: border-box;
   width: 100%;
   min-width: 16vw;
@@ -232,12 +247,14 @@ function Messages({ children }) {
     <>
       <Layout>
         <ChatFeed>
-          {feed.map((msg, i) => (
-            <ChatMsg key={i} owner={msg.user}>
-              <span>{msg.user}</span>
-              <p>{msg.msg}</p>
-            </ChatMsg>
-          ))}
+          <div>
+            {feed.map((msg, i) => (
+              <ChatMsg key={i} owner={msg.user}>
+                <span>{msg.user}</span>
+                <p>{msg.msg}</p>
+              </ChatMsg>
+            ))}
+          </div>
           <Message
             onSubmit={(e) => {
               e.preventDefault();
