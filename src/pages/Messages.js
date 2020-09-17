@@ -214,13 +214,16 @@ function Messages({ children }) {
   const [message, setMessage] = useState({ msg: "" });
   const [feed, setFeed] = useState([]);
   useEffect(() => {
-    const unsub = db.collection("chat").onSnapshot((ss) => {
-      const allMsgs = ss.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setFeed(allMsgs);
-    });
+    const unsub = db
+      .collection("chat")
+      .orderBy("time")
+      .onSnapshot((ss) => {
+        const allMsgs = ss.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setFeed(allMsgs);
+      });
     return () => {
       unsub();
     };
