@@ -22,6 +22,8 @@ const theme = {
     pHover: "#5352ed",
     secondary: "#2ed573",
     sHover: "#7bed9f",
+    error: "#ff4757",
+    eHover: "#ff6b81",
   },
 };
 ReactDOM.render(

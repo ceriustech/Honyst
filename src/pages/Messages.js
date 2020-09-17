@@ -168,24 +168,21 @@ const ContactsList = styled.ul`
   margin: 0;
   padding: 0;
   border-left: 2px solid ${(props) => props.theme.colors.pHover};
-  li {
-    border: 1px solid ${(props) => props.theme.colors.secondary};
-    border-radius: 6px;
-    padding: 8px;
-    margin: 8px;
-    &:hover {
-      background-color: ${(props) => rgba(props.theme.colors.sHover, 0.5)};
-      cursor: pointer;
-    }
-    h5 {
-      margin: 0;
-    }
-    h4 {
-      margin: 0;
-    }
+`;
+const ContactCard = styled.li`
+  border: 1px solid ${(props) => props.theme.colors.secondary};
+  border-radius: 6px;
+  padding: 8px;
+  margin: 8px;
+  &:hover {
+    background-color: ${(props) => rgba(props.theme.colors.sHover, 0.5)};
+    cursor: pointer;
+  }
+  span {
+    color: ${(props) =>
+      props.isActive ? props.theme.colors.secondary : props.theme.colors.error};
   }
 `;
-
 const ChatMsg = styled.div`
   width: 100%;
   padding: 8px 16px;
@@ -203,11 +200,11 @@ function Contacts({ data }) {
   return (
     <ContactsList>
       {data.map((user) => (
-        <li key={user._id}>
+        <ContactCard key={user._id} isActive={user.isActive}>
           <h4>{`${user.name.first} ${user.name.last}`}</h4>
           <h5>Current Balance: {user.balance}</h5>
           <span>{user.isActive ? "Online" : "Offline"}</span>
-        </li>
+        </ContactCard>
       ))}
     </ContactsList>
   );
