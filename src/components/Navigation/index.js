@@ -15,8 +15,9 @@ import {
 // setups of navigation base
 const NavWrapper = styled.div`
   width: 100px;
+  min-width: 80px;
   height: 100%;
-  background-color: #341f97;
+  background-color: ${(props) => props.theme.colors.primary};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +47,7 @@ const Item = styled(Link)`
   justify-content: center;
   color: white;
   &:hover {
-    background-color: #5f27cd;
+    background-color: ${(props) => props.theme.colors.pHover};
   }
 `;
 
@@ -79,4 +80,3 @@ export default function Navigation(props) {
     </NavWrapper>
   );
 }
-
