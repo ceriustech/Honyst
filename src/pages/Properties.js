@@ -18,8 +18,10 @@ const Image = styled.div`
   width: 450px;
   height: 300px;
 `;
+
 const Card = styled.div`
   overflow: hidden;
+  width: 450px;
   box-sizing: border-box;
   border: 2px solid ${(props) => props.theme.colors.primary};
   margin: 16px;
@@ -33,11 +35,14 @@ const Card = styled.div`
   &:hover {
     cursor: pointer;
     border: 2px solid ${(props) => props.theme.colors.pHover};
-    ${Image} {
-      background-size: 125%;
-      opacity: 0.9;
-    }
   }
+`;
+const SlideShow = styled.div`
+  width: ${(props) => props.count}00%;
+  overflow: hidden;
+  display: flex;
+  justify-items: center;
+  align-items: center;
 `;
 
 function Properties() {
@@ -60,10 +65,11 @@ function Properties() {
       <Layout>
         {properties.map((property) => (
           <Card key={property.id}>
-            {property.images.map((image) => (
-              <Image src={image} />
-            ))}
-
+            <SlideShow count={property.images.length}>
+              {property.images.map((image) => (
+                <Image src={image} />
+              ))}
+            </SlideShow>
             <h4>{property.title}</h4>
             <p>Units: {property.units}</p>
           </Card>
