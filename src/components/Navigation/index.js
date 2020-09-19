@@ -10,6 +10,7 @@ import {
   faEnvelope,
   faSignOutAlt,
   faHeading,
+  faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
 // setups of navigation base
@@ -72,6 +73,9 @@ export default function Navigation(props) {
         </Item>
         <Item flex={1} to="/payments">
           <FontAwesomeIcon icon={faMoneyCheckAlt} />
+        </Item>
+        <Item flex={1} to="/faq">
+          <FontAwesomeIcon icon={faQuestionCircle} />
         </Item>
       </Menu>
       <Item to="/signout">
