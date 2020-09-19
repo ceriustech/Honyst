@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "@reach/router";
 import styled from "styled-components";
 import { db } from "../Firebase";
+import Widget from "../components/widget";
 
 const Layout = styled.div`
   display: flex;
@@ -68,6 +69,7 @@ function Properties(props) {
   }, []);
   return (
     <>
+      <Widget />
       <h1>Properties</h1>
       <Layout>
         {properties.map((property) => (
