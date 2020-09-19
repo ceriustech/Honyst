@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "@reach/router";
 import styled from "styled-components";
 import { db } from "../Firebase";
 
@@ -8,6 +9,12 @@ const Layout = styled.div`
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 `;
 
 const Image = styled.div`
@@ -19,7 +26,7 @@ const Image = styled.div`
   height: 300px;
 `;
 
-const Card = styled.div`
+const Card = styled(Link)`
   overflow: hidden;
   width: 450px;
   box-sizing: border-box;
@@ -45,7 +52,7 @@ const SlideShow = styled.div`
   align-items: center;
 `;
 
-function Properties() {
+function Properties(props) {
   const [properties, setProperties] = useState([]);
   useEffect(() => {
     async function getProperties() {
@@ -64,10 +71,10 @@ function Properties() {
       <h1>Properties</h1>
       <Layout>
         {properties.map((property) => (
-          <Card key={property.id}>
+          <Card key={property.id} to={`/${property.id}`}>
             <SlideShow count={property.images.length}>
-              {property.images.map((image) => (
-                <Image src={image} />
+              {property.images.map((image, i) => (
+                <Image key={i} src={image} />
               ))}
             </SlideShow>
             <h4>{property.title}</h4>

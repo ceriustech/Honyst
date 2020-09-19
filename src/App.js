@@ -11,6 +11,7 @@ import Ledger from "./pages/Ledger";
 import Messages from "./pages/Messages";
 import Payments from "./pages/Payments";
 import Properties from "./pages/Properties";
+import Property from "./pages/Property";
 
 // lets setup the layout here
 const Layout = styled.div`
@@ -35,6 +36,7 @@ function App() {
           <Messages path="/messages" />
           <Payments path="/payments" />
           <Faq path="/faq" />
+          <Property path="/:propId" />
         </Router>
       </BodyLayout>
     </Layout>
