@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { AuthContext } from "../shared/Auth";
 import { db } from "../Firebase";
 import styled from "styled-components";
 import { rgba } from "polished";
@@ -225,9 +226,10 @@ function Contacts({ data }) {
   );
 }
 
-function Messages({ children }) {
+function Messages(props) {
   const [message, setMessage] = useState({ msg: "" });
   const [feed, setFeed] = useState([]);
+  const user = useContext(AuthContext);
   useEffect(() => {
     const unsub = db
       .collection("chat")
@@ -243,6 +245,7 @@ function Messages({ children }) {
       unsub();
     };
   }, []);
+  console.log(user);
   return (
     <>
       <Layout>
