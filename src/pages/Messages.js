@@ -227,12 +227,13 @@ function Contacts({ data }) {
 }
 
 function Messages(props) {
+  const [chatId, setChatId] = useState(1);
   const [message, setMessage] = useState({ msg: "" });
   const [feed, setFeed] = useState([]);
   const user = useContext(AuthContext);
   useEffect(() => {
     const unsub = db
-      .collection("chat")
+      .collection(`chat/${user.uid}/${chatId}`)
       .orderBy("time")
       .onSnapshot((ss) => {
         const allMsgs = ss.docs.map((doc) => ({
@@ -245,7 +246,6 @@ function Messages(props) {
       unsub();
     };
   }, []);
-  console.log(user);
   return (
     <>
       <Layout>
@@ -261,7 +261,7 @@ function Messages(props) {
           <Message
             onSubmit={(e) => {
               e.preventDefault();
-              db.collection("chat").add(message);
+              db.collection(`chat/${user.uid}/${chatId}`).add(message);
               setMessage({ msg: "" });
             }}
           >
@@ -272,7 +272,7 @@ function Messages(props) {
               // we need to get a user to add here
               onChange={(e) =>
                 setMessage({
-                  user: "me",
+                  user: user.email,
                   msg: e.target.value,
                   time: Date.now(),
                 })

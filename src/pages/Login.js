@@ -1,27 +1,26 @@
 import React, { useCallback, useContext } from "react";
-import { Redirect } from "@reach/router";
 import { auth } from "../Firebase";
 import { AuthContext } from "../shared/Auth";
 
-const Login = ({ history }) => {
+const Login = ({ navigate }) => {
   const handleLogin = useCallback(
-    async (event) => {
-      event.preventDefault();
-      const { email, password } = event.target.elements;
+    async (e) => {
+      e.preventDefault();
+      const { email, password } = e.target.elements;
       try {
-        await auth().signInWithEmailAndPassword(email.value, password.value);
-        history.push("/");
+        await auth.signInWithEmailAndPassword(email.value, password.value);
+        await navigate("/");
       } catch (error) {
         alert(error);
       }
     },
-    [history]
+    [navigate]
   );
 
-  const { currentUser } = useContext(AuthContext);
+  const currentUser = useContext(AuthContext);
 
   if (currentUser) {
-    return <Redirect to="/" />;
+    navigate("/");
   }
 
   return (
