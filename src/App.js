@@ -12,7 +12,11 @@ import Ledger from "./pages/Ledger";
 import Messages from "./pages/Messages";
 import Payments from "./pages/Payments";
 import Properties from "./pages/Properties";
+<<<<<<< HEAD
 import Login from "./pages/Login";
+=======
+import Property from "./pages/Property";
+>>>>>>> qa-branch
 
 // lets setup the layout here
 const Layout = styled.div`
@@ -27,6 +31,7 @@ const Layout = styled.div`
 
 function App() {
   return (
+<<<<<<< HEAD
     <AuthProvider>
       <Layout>
         <Navigation />
@@ -43,6 +48,22 @@ function App() {
         </BodyLayout>
       </Layout>
     </AuthProvider>
+=======
+    <Layout>
+      <Navigation />
+      <BodyLayout>
+        <Router>
+          <Dashboard path="/dashboard" />
+          <Properties path="/properties" />
+          <Ledger path="/ledger" />
+          <Messages path="/messages" />
+          <Payments path="/payments" />
+          <Faq path="/faq" />
+          <Property path="/:propId" />
+        </Router>
+      </BodyLayout>
+    </Layout>
+>>>>>>> qa-branch
   );
 }
 
