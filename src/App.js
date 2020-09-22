@@ -24,13 +24,14 @@ const Layout = styled.div`
   width: 100vw;
   padding: 16px;
 `;
+
 function App() {
   return (
     <AuthProvider>
       <Layout>
         <Navigation />
         <BodyLayout>
-          <Router>
+          <Router style={{ width: "100%" }}>
             <Login path="/login" />
             <Dashboard path="/dashboard" />
             <Properties path="/properties" />

@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import LedgerCardData from "../components/Dashboard-Site-Data.js/ledger-site-dboard-data";
+import MessageCardData from "../components/Dashboard-Site-Data.js/messages-site-dboard-data";
+import PaymentsCardData from "../components/Dashboard-Site-Data.js/payments-site-dboard-data";
+import PropertiesCardData from "../components/Dashboard-Site-Data.js/properties-site-dboard-data";
 
 // this should be a dashboard component per the requirements
 // i'd assume it is connected to different data so lets keep a top level state for it all.
@@ -17,8 +20,8 @@ const DashBoardLayout = styled.div`
 const DashboardContent = styled.div`
   margin-top: 25px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: repeat(3, 150px);
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-auto-rows: repeat(2, 150px) !important;
   grid-gap: 10px;
 `;
 
@@ -26,8 +29,12 @@ function Dashboard({ children }) {
   return (
     <DashBoardLayout>
       <h1>Dashboard</h1>
-      <LedgerCardData />
-      <DashboardContent>{children}</DashboardContent>
+      <DashboardContent>
+        <LedgerCardData />
+        <MessageCardData />
+        <PaymentsCardData />
+        <PropertiesCardData />
+      </DashboardContent>
     </DashBoardLayout>
   );
 }
