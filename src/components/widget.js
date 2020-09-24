@@ -6,8 +6,8 @@ import { faBuilding } from "@fortawesome/free-solid-svg-icons";
 
 const Wrapper = styled.div`
   position: absolute;
-  top: 32px;
-  right: 32px;
+  top: 5px;
+  right: 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

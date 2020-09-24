@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
-import { AuthContext } from "../shared/Auth";
+import React, { useState, useEffect } from "react";
 import { db } from "../Firebase";
 import styled from "styled-components";
 import { rgba } from "polished";
@@ -226,14 +225,12 @@ function Contacts({ data }) {
   );
 }
 
-function Messages(props) {
-  const [chatId, setChatId] = useState(1);
+function Messages({ children }) {
   const [message, setMessage] = useState({ msg: "" });
   const [feed, setFeed] = useState([]);
-  const user = useContext(AuthContext);
   useEffect(() => {
     const unsub = db
-      .collection(`chat/${user.uid}/${chatId}`)
+      .collection("chat")
       .orderBy("time")
       .onSnapshot((ss) => {
         const allMsgs = ss.docs.map((doc) => ({
@@ -261,7 +258,7 @@ function Messages(props) {
           <Message
             onSubmit={(e) => {
               e.preventDefault();
-              db.collection(`chat/${user.uid}/${chatId}`).add(message);
+              db.collection("chat").add(message);
               setMessage({ msg: "" });
             }}
           >
@@ -272,7 +269,7 @@ function Messages(props) {
               // we need to get a user to add here
               onChange={(e) =>
                 setMessage({
-                  user: user.email,
+                  user: "me",
                   msg: e.target.value,
                   time: Date.now(),
                 })

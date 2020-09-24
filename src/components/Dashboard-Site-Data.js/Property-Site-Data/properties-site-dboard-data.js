@@ -12,14 +12,12 @@ const PropertiesCardLayout = styled.div`
   padding: 15px;
   position: relative;
 
-  h1 {
-    margin: 5px 12px 12px;
+  &::-webkit-scrollbar {
+    display: none;
   }
 
-  ::-webkit-scrollbar-track {
-    border: 1px solid #000;
-    padding: 2px 0;
-    background-color: #404040;
+  h1 {
+    margin: 5px 12px 12px;
   }
 `;
 
@@ -30,9 +28,9 @@ const Spacer = styled.div`
 const HeaderContainer = styled.div`
   background-color: #fff;
   padding-top: 10px;
-  position: fixed;
-  top: 128px;
-  width: 57%;
+  position: absolute;
+  top: 0;
+  width: 97%;
   height: 7%;
 `;
 
@@ -40,7 +38,7 @@ const PropertiesCardData = (props) => {
   return (
     <PropertiesCardLayout>
       <HeaderContainer>
-        <h1 style={{ fontSize: "24px" }}>Properties Card Data</h1>
+        <h1 style={{ fontSize: "24px" }}>Properties Data</h1>
       </HeaderContainer>
       <Spacer />
       <PropertyItemData />
