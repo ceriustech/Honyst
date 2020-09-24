@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { db } from "../Firebase";
 
-import LedgerCardData from "../components/Dashboard-Site-Data.js/ledger-site-dboard-data";
-import MessageCardData from "../components/Dashboard-Site-Data.js/messages-site-dboard-data";
-import PaymentsCardData from "../components/Dashboard-Site-Data.js/payments-site-dboard-data";
-import PropertiesCardData from "../components/Dashboard-Site-Data.js/properties-site-dboard-data";
+import LedgerCardData from "../components/Dashboard-Site-Data.js/Ledger-Site-Data/ledger-site-dboard-data";
+import MessageCardData from "../components/Dashboard-Site-Data.js/Messages-Site-Data/messages-site-dboard-data";
+import PaymentsCardData from "../components/Dashboard-Site-Data.js/Payments-Site-Data/payments-site-dboard-data";
+import PropertiesCardData from "../components/Dashboard-Site-Data.js/Property-Site-Data/properties-site-dboard-data";
 
 // this should be a dashboard component per the requirements
 // i'd assume it is connected to different data so lets keep a top level state for it all.
@@ -18,22 +19,22 @@ const DashBoardLayout = styled.div`
 `;
 
 const DashboardContent = styled.div`
-  margin-top: 25px;
+  margin-top: 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  grid-auto-rows: repeat(2, 150px) !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 175px;
   grid-gap: 10px;
 `;
 
 function Dashboard({ children }) {
   return (
     <DashBoardLayout>
-      <h1>Dashboard</h1>
+      <h1 style={{ fontSize: "28px" }}>My Dashboard</h1>
       <DashboardContent>
-        <LedgerCardData />
-        <MessageCardData />
-        <PaymentsCardData />
         <PropertiesCardData />
+        <MessageCardData />
+        <LedgerCardData />
+        <PaymentsCardData />
       </DashboardContent>
     </DashBoardLayout>
   );

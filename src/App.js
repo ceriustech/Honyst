@@ -12,14 +12,14 @@ import Ledger from "./pages/Ledger";
 import Messages from "./pages/Messages";
 import Payments from "./pages/Payments";
 import Properties from "./pages/Properties";
-<<<<<<< HEAD
-import Login from "./pages/Login";
-=======
 import Property from "./pages/Property";
->>>>>>> qa-branch
+import Login from "./pages/Login";
+
+import Widget from "./components/widget";
 
 // lets setup the layout here
 const Layout = styled.div`
+  background-color: #f5f6fa;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -31,11 +31,11 @@ const Layout = styled.div`
 
 function App() {
   return (
-<<<<<<< HEAD
     <AuthProvider>
       <Layout>
         <Navigation />
         <BodyLayout>
+          <Widget />
           <Router style={{ width: "100%" }}>
             <Login path="/login" />
             <Dashboard path="/dashboard" />
@@ -48,22 +48,6 @@ function App() {
         </BodyLayout>
       </Layout>
     </AuthProvider>
-=======
-    <Layout>
-      <Navigation />
-      <BodyLayout>
-        <Router>
-          <Dashboard path="/dashboard" />
-          <Properties path="/properties" />
-          <Ledger path="/ledger" />
-          <Messages path="/messages" />
-          <Payments path="/payments" />
-          <Faq path="/faq" />
-          <Property path="/:propId" />
-        </Router>
-      </BodyLayout>
-    </Layout>
->>>>>>> qa-branch
   );
 }
 

@@ -69,7 +69,6 @@ function Properties(props) {
   }, []);
   return (
     <>
-      <Widget />
       <h1>Properties</h1>
       <Layout>
         {properties.map((property) => (

@@ -2,16 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 const MessagesCardLayout = styled.div`
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0px 0px 17px 4px rgba(217, 209, 255, 1);
-  width: 500px;
-  height: 450px;
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+  padding: 15px;
 `;
 
 const MessageCardData = () => {
   return (
     <MessagesCardLayout>
-      <h1>Message Card Data</h1>
+      <h1 style={{ fontSize: "24px" }}>Message Card Data</h1>
     </MessagesCardLayout>
   );
 };
