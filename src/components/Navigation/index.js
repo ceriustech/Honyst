@@ -18,7 +18,7 @@ const NavWrapper = styled.div`
   width: 100px;
   min-width: 80px;
   height: 100%;
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: green;
   display: flex;
   flex-direction: column;
   align-items: center;
